@@ -1,0 +1,2 @@
+argentina,2
+brasil,0
