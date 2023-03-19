@@ -5,4 +5,5 @@ public class Equipo {
         this.nombre="equipoFalso";
         this.descripcion="123";
     }
+
 }

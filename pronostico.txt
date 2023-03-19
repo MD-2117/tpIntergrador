@@ -1,1 +1,1 @@
-argentina,ganador
+argentina,2,brasil,0
