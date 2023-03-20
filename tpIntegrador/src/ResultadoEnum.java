@@ -1,17 +1,16 @@
 public class ResultadoEnum {
-    int ganador,perdedor,empate=0;
-    ResultadoEnum(int ganadorP,int perdedorP,int empateP){
-        this.ganador=ganadorP;
-        this.perdedor=perdedorP;
-        this.empate=empateP;
+    String[] resultado=new String[2];
+    ResultadoEnum(String equipoX,String resultadoX){
+        this.resultado[0]=equipoX;
+        this.resultado[1]=resultadoX;
     }
-    public int getGanador(){
-        return this.ganador;
+
+    public ResultadoEnum(String[] resultadoR) {
+        this.resultado[0]=resultadoR[0];
+        this.resultado[1]=resultadoR[1];
     }
-    public int getPerdedor(){
-        return this.perdedor;
-    }
-    public int getEmpate(){
-        return this.empate;
+
+    public String[] getResultado() {
+        return resultado;
     }
 }

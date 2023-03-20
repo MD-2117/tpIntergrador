@@ -26,4 +26,8 @@ public class Pronostico{
         return this.puntos;
     }
 
+    public void setPuntos(int puntosPartido){
+        this.puntos=puntosPartido;
+    }
+
 }

@@ -29,6 +29,12 @@ public class Partido {
         if (golesEquipo1 > golesEquipo2) {
             resultadoFinal[0]=primerEquipo;
             resultadoFinal[1]="ganador";
+        } else if (golesEquipo1<golesEquipo2) {
+            resultadoFinal[0]=segundoEquipo;
+            resultadoFinal[1]="ganador";
+        } else if (golesEquipo1==golesEquipo2){
+            resultadoFinal[0]="ambos equipos";
+            resultadoFinal[1]="empate";
         }
         return resultadoFinal;
     }

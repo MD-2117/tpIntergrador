@@ -6,7 +6,7 @@ public class Equipo {
         this.descripcion="123";
     }
     public String getNombre(){
-        return this.nombre
+        return this.nombre;
     }
     public String getDescripcion() {
         return this.descripcion;
