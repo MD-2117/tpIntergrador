@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -23,9 +24,14 @@ public class Main {
         Equipo equipo2 = new Equipo(rondaA[2],"los que vienen de la selva");
         Partido primerPartido = new Partido(equipo1.getNombre(),equipo2.getNombre(),golEquipo1,golEquipo2);
         //cargo resultadoEnum
-        ResultadoEnum resultadoFinal = new ResultadoEnum(primerPartido.resultado(primerPartido.getPrimerEquipo(),primerPartido.getSegundoEquipo(),primerPartido.getGolesEquipo1(),primerPartido.getGolesEquipo2()));
-        ResultadoEnum resultadoProno= new ResultadoEnum(partidoJUAN.resultado(partidoJUAN.getPrimerEquipo(),partidoJUAN.getSegundoEquipo(),partidoJUAN.getGolesEquipo1(),partidoJUAN.getGolesEquipo2()));
-        
+        String[] cargoResultado = new String[2];
+        cargoResultado = primerPartido.resultado(primerPartido.getPrimerEquipo(),primerPartido.getSegundoEquipo(),primerPartido.getGolesEquipo1(),primerPartido.getGolesEquipo2()).split(",");
+        ResultadoEnum resultadoFinal = new ResultadoEnum(cargoResultado);
+        cargoResultado = partidoJUAN.resultado(partidoJUAN.getPrimerEquipo(),partidoJUAN.getSegundoEquipo(),partidoJUAN.getGolesEquipo1(),partidoJUAN.getGolesEquipo2()).split(",");
+        ResultadoEnum resultadoProno= new ResultadoEnum(cargoResultado);
+        //imprimo puntos
+        System.out.println(pronosticoJUAN.puntos);
+
     }
     public static String[] leerArchivo(String ruta) throws FileNotFoundException {
         File archivo = new File(ruta);

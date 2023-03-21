@@ -24,17 +24,17 @@ public class Partido {
         return this.golesEquipo2;
     }
 
-    public String[] resultado(String primerEquipo, String segundoEquipo, int golesEquipo1, int golesEquipo2){
-        String[] resultadoFinal = new String[2];
+    public String resultado(String primerEquipo, String segundoEquipo, int golesEquipo1, int golesEquipo2){
+        String resultadoFinal = null;
         if (golesEquipo1 > golesEquipo2) {
-            resultadoFinal[0]=primerEquipo;
-            resultadoFinal[1]="ganador";
+            resultadoFinal=primerEquipo;
+            resultadoFinal= resultadoFinal+",ganador";
         } else if (golesEquipo1<golesEquipo2) {
-            resultadoFinal[0]=segundoEquipo;
-            resultadoFinal[1]="ganador";
+            resultadoFinal=primerEquipo;
+            resultadoFinal= resultadoFinal+",ganador";
         } else if (golesEquipo1==golesEquipo2){
-            resultadoFinal[0]="ambos equipos";
-            resultadoFinal[1]="empate";
+            resultadoFinal="ambos equipos";
+            resultadoFinal=resultadoFinal+",empate";
         }
         return resultadoFinal;
     }

@@ -8,7 +8,7 @@ public class Pronostico{
     Partido partido = new Partido("equipo1","equipo2",0,1);
     Equipo equipo = new Equipo("argentina","la mejor");
 
-    Pronostico(Partido partidoPro,Equipo equipoPro) throws FileNotFoundException {
+    Pronostico(Partido partidoPro,Equipo equipoPro){
         this.equipo=equipoPro;
         this.partido=partidoPro;
         this.puntos=0;
@@ -17,7 +17,6 @@ public class Pronostico{
     public Equipo getEquipo() {
         return this.equipo;
     }
-
     public Partido getPartido() {
         return this.partido;
     }
