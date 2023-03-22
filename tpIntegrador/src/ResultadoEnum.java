@@ -10,7 +10,7 @@ public class ResultadoEnum {
         this.resultado[1]=resultadoR[1];
     }
 
-    public String[] getResultado() {
-        return resultado;
+    public String getResultado() {
+        return this.resultado[0];
     }
 }

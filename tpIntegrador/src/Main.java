@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.Collator;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -30,8 +31,10 @@ public class Main {
         cargoResultado = partidoJUAN.resultado(partidoJUAN.getPrimerEquipo(),partidoJUAN.getSegundoEquipo(),partidoJUAN.getGolesEquipo1(),partidoJUAN.getGolesEquipo2()).split(",");
         ResultadoEnum resultadoProno= new ResultadoEnum(cargoResultado);
         //imprimo puntos
-        System.out.println(pronosticoJUAN.puntos);
-
+        if(resultadoFinal.getResultado().equals(resultadoProno.getResultado())){
+            pronosticoJUAN.setPuntos(1);
+        }
+        System.out.println(pronosticoJUAN.getPuntos());
     }
     public static String[] leerArchivo(String ruta) throws FileNotFoundException {
         File archivo = new File(ruta);
